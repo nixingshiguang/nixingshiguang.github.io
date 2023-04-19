@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入清单 -->
+  <link rel="manifest" href="manifest.json">
+  <!-- 以下一行为网页图标，可通过替换文件夹里的favicon.ico文件更换 -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- 以下一行更改网页名称 -->
+  <title>逆行时光</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- 以下一行为引入导航栏图标的脚本 -->
+  <script src="./font_ajqj9tgvvap/iconfont.js"></script>
+  <!-- 以下一行为导入jQuery库 -->
+  <script src="jQuery.js"></script>
+  <!-- 以下为导航栏图标默认样式 -->
+  <style>
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 下方导航栏 -->
+  <nav>
+    <ul>
+      <li style="--i:#a955ff;--j:#ea51ff;" id="nav1">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zhuye"></use>
+        </svg>
+        <!-- 导航栏文字 -->
+        <span class="title">菜单一</span>
+      </li>
+      <li style="--i:#56CCF2;--j:#2f81ed;" id="nav2">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-fuwuqi"></use>
+        </svg>
+        <!-- 导航栏文字 -->
+        <span class="title">菜单二</span>
+      </li>
+      <li style="--i:#FF9966;--j:#FF5E62;" id="nav3">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-fuwuqi"></use>
+        </svg>
+        <!-- 导航栏文字 -->
+        <span class="title">菜单三</span>
+      </li>
+      <li style="--i:#80FF72;--j:#7EE8FA;" id="nav4">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-mofabang"></use>
+        </svg>
+        <!-- 导航栏文字 -->
+        <span class="title">菜单四</span>
+      </li>
+    </ul>
+  </nav>
+  <div id="main">
+    <!-- 快捷方式块,按需更改href属性后的链接以及a标签内文本即可 -->
+    <ul id="liebiao">
+      <li class="menu" id="menu1">
+        <div>
+          <ul>
+            <li><a href="" target="_blank">第1个标签</a></li>
+            <li><a href="" target="_blank">第2个标签</a></li>
+            <li><a href="" target="_blank">第3个标签</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu" id="menu2">
+        <div>
+          <ul>
+            <li><a href="" target="_blank">第1个标签</a></li>
+            <li><a href="" target="_blank">第2个标签</a></li>
+            <li><a href="" target="_blank">第3个标签</a></li>
+            <li><a href="" target="_blank">第4个标签</a></li>
+            <li><a href="" target="_blank">第5个标签</a></li>
+            <li><a href="" target="_blank">第6个标签</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu" id="menu3">
+        <div>
+          <ul>
+            <li><a href="" target="_blank">第1个标签</a></li>
+            <li><a href="" target="_blank">第2个标签</a></li>
+            <li><a href="" target="_blank">第3个标签</a></li>
+            <li><a href="" target="_blank">第4个标签</a></li>
+            <li><a href="" target="_blank">第5个标签</a></li>
+            <li><a href="" target="_blank">第6个标签</a></li>
+            <li><a href="" target="_blank">第7个标签</a></li>
+            <li><a href="" target="_blank">第8个标签</a></li>
+            <li><a href="" target="_blank">第9个标签</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu" id="menu4">
+        <div>
+          <ul>
+            <li><a href="" target="_blank">第1个标签</a></li>
+            <li><a href="" target="_blank">第2个标签</a></li>
+            <li><a href="" target="_blank">第3个标签</a></li>
+            <li><a href="" target="_blank">第4个标签</a></li>
+            <li><a href="" target="_blank">第5个标签</a></li>
+            <li><a href="" target="_blank">第6个标签</a></li>
+            <li><a href="" target="_blank">第7个标签</a></li>
+            <li><a href="" target="_blank">第8个标签</a></li>
+            <li><a href="" target="_blank">第9个标签</a></li>
+            <li><a href="" target="_blank">第10个标签</a></li>
+            <li><a href="" target="_blank">第11个标签</a></li>
+            <li><a href="" target="_blank">第12个标签</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+<!-- 引入服务辅助角色脚本 -->
+<script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' });
+  }
+  </script>
+<!-- 引入JavaScript文件 -->
+<script src="index.js"></script>
+
+</html>

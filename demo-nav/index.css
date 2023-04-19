@@ -1,0 +1,225 @@
+/* 全局默认 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* 超链接默认样式 */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+}
+
+/* 更换url后的链接,可以更换壁纸 */
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(pc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 下导航栏 */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    z-index: 2;
+}
+
+nav>ul {
+    position: relative;
+    display: flex;
+    gap: 25px;
+}
+
+/* 更改background属性，可以更改快捷方式背景 */
+nav>ul>li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    backdrop-filter: blur(30px);
+}
+
+/* 图标文本 */
+.title {
+    display: none;
+    font-size: 25px;
+}
+
+.icon {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+/* 鼠标悬浮 */
+nav>ul>li:hover .icon {
+    display: none;
+}
+
+nav>ul>li:hover .title {
+    display: block;
+}
+
+nav>ul>li:hover {
+    width: 180px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    opacity: 0.7;
+}
+
+/* 二级菜单 */
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#liebiao {
+    width: 80%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+#menu1,
+#menu2,
+#menu3,
+#menu4 {
+    display: none;
+    position: relative;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu1 ul,
+#menu2 ul,
+#menu3 ul,
+#menu4 ul {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(4, 180px);
+    justify-content: center;
+}
+
+#menu1 li,
+#menu2 li,
+#menu3 li,
+#menu4 li {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    height: 80px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+}
+
+/* 二级菜单鼠标悬浮特效 */
+#menu1 li:hover {
+    background: linear-gradient(45deg, #a955ff, #ea51ff);
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+#menu2 li:hover {
+    background: linear-gradient(45deg, #56CCF2, #2f81ed);
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+#menu3 li:hover {
+    background: linear-gradient(45deg, #FF9966, #FF5E62);
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+#menu4 li:hover {
+    background: linear-gradient(45deg, #80FF72, #7EE8FA);
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+footer {
+    position: fixed;
+    bottom: 3px;
+    font-size: small;
+    z-index: 5;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+    nav ul li {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav>ul>li:hover {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+    /* 移动设备更换壁纸,改变url后的内容，可以是文件地址，可以是网址 */
+    body {
+        background: url(phone.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #menu1 ul,
+    #menu2 ul,
+    #menu3 ul,
+    #menu4 ul {
+        grid-template-columns: 130px 130px;
+        gap: 10px;
+
+    }
+
+    #menu1 li,
+    #menu2 li,
+    #menu3 li,
+    #menu4 li {
+        font-size: 15px;
+        height: 50px;
+    }
+
+    #menu1 li:hover,
+    #menu2 li:hover,
+    #menu3 li:hover,
+    #menu4 li:hover {
+        font-size: 18px;
+    }
+}

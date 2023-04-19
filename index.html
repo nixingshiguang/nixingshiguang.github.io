@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网站名称 -->
+    <title>逆行时光-Demo站</title>
+    <!-- 标题图标 -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- 引入主css文件 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入jQuery3.6.0 -->
+    <script src="./js/jQuery.js"></script>
+    <!-- 鼠标点击特效 -->
+    <script src="./js/mouse.js"></script>
+    <!-- 引入清单 -->
+    <link rel="manifest" href="./manifest.json">
+    <!-- 禁用右键的脚本 -->
+    <script type="text/javascript">
+        window.document.oncontextmenu = function () {
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Demo站</h1>
+        <div class="box">
+            <ul>
+                <li><a href="./demo-nav/index.html">一个纯净且漂亮的导航页</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<!-- 引入服务辅助角色脚本 -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' });
+    }
+</script>
+
+</html>
