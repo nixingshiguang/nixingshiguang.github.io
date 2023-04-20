@@ -1,8 +1,8 @@
 {
     "lang": "en-us",
-    "name": "逆行时光",
-    "short_name": "逆行时光",
-    "description": "个人主页",
+    "name": "Demo",
+    "short_name": "Demo",
+    "description": "Demo合集",
     "start_url": "/",
     "background_color": "#fff",
     "theme_color": "#fff",

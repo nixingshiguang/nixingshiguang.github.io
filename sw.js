@@ -1,4 +1,4 @@
-const CACHE_NAME = `逆行时光`;
+const CACHE_NAME = `Demo`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
